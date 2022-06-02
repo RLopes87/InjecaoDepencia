@@ -9,11 +9,14 @@ namespace InjecaoDepencia.Controllers
     {
         IUsuarioService _service;
 
+        /// <summary>
+        /// Este é o método construtor 
+        /// </summary>
+        /// <param name="service"></param>
         public UsuarioController(IUsuarioService service)
         {
             _service = service;
         }
-
         public IActionResult Index()
         {
             var usuarios = _service.ListarUsuario();
